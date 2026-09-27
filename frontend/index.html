@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบสั่งอาหาร</title>
+    <script src="foodmenusystem.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            Logo
+        </div>
+
+        <button class="table-btn">
+            โต๊ะหมายเลข 5
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= MENU ================= -->
+
+        <section class="menu-area">
+
+
+            <!-- ===== CATEGORY ===== -->
+
+            <div class="categories">
+
+                <a href="#noodle" class="category">
+
+                    <div class="category-img">
+                        🍜
+                    </div>
+
+                    <span>
+                        เมนูเส้น
+                    </span>
+
+                </a>
+
+
+                <a href="#single" class="category">
+
+                    <div class="category-img">
+                        🍛
+                    </div>
+
+                    <span>
+                        อาหารจานเดียว
+                    </span>
+
+                </a>
+
+
+                <a href="#drink" class="category">
+
+                    <div class="category-img">
+                        🥤
+                    </div>
+
+                    <span>
+                        เครื่องดื่ม
+                    </span>
+
+                </a>
+
+
+                <a href="#snack" class="category">
+
+                    <div class="category-img">
+                        🍲
+                    </div>
+
+                    <span>
+                        ของทานเล่น
+                    </span>
+
+                </a>
+
+
+                <a href="#fried" class="category">
+
+                    <div class="category-img">
+                        🍗
+                    </div>
+
+                    <span>
+                        ของทอด
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= NOODLE ================= -->
+
+            <section
+                class="menu-section"
+                id="noodle"
+            >
+
+                <div class="section-title">
+
+                    <h2>
+                        เมนูเส้น
+                    </h2>
+
+                    <a href="#">
+                        เพิ่มเติม →
+                    </a>
+
+                </div>
+
+
+                <div class="food-grid">
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ก๋วยเตี๋ยวหมู
+                        </h3>
+
+                        <p>
+                            60 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="1">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ผัดไทย
+                        </h3>
+
+                        <p>
+                            70 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="2">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ราดหน้า
+                        </h3>
+
+                        <p>
+                            65 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="3">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ก๋วยเตี๋ยวต้มยำ
+                        </h3>
+
+                        <p>
+                            70 บาท
+                        </p>
+
+                        <button calss="add-btn" data-id="4">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= SINGLE DISH ================= -->
+
+            <section
+                class="menu-section"
+                id="single"
+            >
+
+                <div class="section-title">
+
+                    <h2>
+                        อาหารจานเดียว
+                    </h2>
+
+                    <a href="#">
+                        เพิ่มเติม →
+                    </a>
+
+                </div>
+
+
+                <div class="food-grid">
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ข้าวกะเพรา
+                        </h3>
+
+                        <p>
+                            60 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="5">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ข้าวผัด
+                        </h3>
+
+                        <p>
+                            60 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="6">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ข้าวหมูทอด
+                        </h3>
+
+                        <p>
+                            65 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="7">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ข้าวคะน้าหมู
+                        </h3>
+
+                        <p>
+                            65 บาท
+                        </p>
+
+                        <button class="add-btn" data-id="8">
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= DRINK ================= -->
+
+            <section
+                class="menu-section"
+                id="drink"
+            >
+
+                <div class="section-title">
+
+                    <h2>
+                        เครื่องดื่ม
+                    </h2>
+
+                    <a href="#">
+                        เพิ่มเติม →
+                    </a>
+
+                </div>
+
+
+                <div class="food-grid">
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ชาเย็น
+                        </h3>
+
+                        <p>
+                            35 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            น้ำเปล่า
+                        </h3>
+
+                        <p>
+                            15 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            น้ำอัดลม
+                        </h3>
+
+                        <p>
+                            25 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            กาแฟ
+                        </h3>
+
+                        <p>
+                            40 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= SNACK ================= -->
+
+            <section
+                class="menu-section"
+                id="snack"
+            >
+
+                <div class="section-title">
+
+                    <h2>
+                        ของทานเล่น
+                    </h2>
+
+                    <a href="#">
+                        เพิ่มเติม →
+                    </a>
+
+                </div>
+
+
+                <div class="food-grid">
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            นักเก็ต
+                        </h3>
+
+                        <p>
+                            50 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            เฟรนช์ฟรายส์
+                        </h3>
+
+                        <p>
+                            45 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            เกี๊ยวทอด
+                        </h3>
+
+                        <p>
+                            40 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ไส้กรอกทอด
+                        </h3>
+
+                        <p>
+                            45 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FRIED ================= -->
+
+            <section
+                class="menu-section"
+                id="fried"
+            >
+
+                <div class="section-title">
+
+                    <h2>
+                        ของทอด
+                    </h2>
+
+                    <a href="#">
+                        เพิ่มเติม →
+                    </a>
+
+                </div>
+
+
+                <div class="food-grid">
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ไก่ทอด
+                        </h3>
+
+                        <p>
+                            60 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            หมูทอด
+                        </h3>
+
+                        <p>
+                            60 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            ปีกไก่ทอด
+                        </h3>
+
+                        <p>
+                            70 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card">
+
+                        <div class="food-img">
+                            รูปอาหาร
+                        </div>
+
+                        <h3>
+                            หมูกรอบ
+                        </h3>
+
+                        <p>
+                            75 บาท
+                        </p>
+
+                        <button>
+                            เพิ่ม
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ================= ORDER SUMMARY ================= -->
+
+        <aside class="order-summary">
+
+
+            <h2>
+                รายการคำสั่งซื้อ
+            </h2>
+
+
+            <div class="order-info">
+
+                โต๊ะ : 5
+
+                <br>
+
+                เวลา : 12:00
+
+            </div>
+
+
+            <!-- รายการอาหารที่เลือก -->
+
+            <div class="orderlist">
+
+                <!-- JavaScript จะเพิ่มรายการตรงนี้ -->
+
+            </div>
+
+
+            <!-- ส่วนล่าง -->
+
+            <div class="order-bottom">
+
+
+                <div class="total">
+
+                    <span>
+                        รวมรายการ
+                    </span>
+
+                    <strong>
+                        0 บาท
+                    </strong>
+
+                </div>
+
+
+                <button class="order-btn">
+
+                    สั่งอาหาร
+
+                </button>
+
+
+                <button class="clear-btn">
+
+                    ล้างรายการ
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        Logo
+        &nbsp;&nbsp;
+        ติดต่อร้าน 099********
+        &nbsp;&nbsp;
+        IG: ****
+
+    </footer>
+
+
+</body>
+
+</html>
