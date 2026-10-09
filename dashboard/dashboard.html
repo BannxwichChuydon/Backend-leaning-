@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แดชบอร์ดร้านอาหาร</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+<script src="dashboard.js"defer></script>
+</head>
+<body>
+<header class="header">
+    <h1>Logo · แดชบอร์ด</h1>
+<a href="../frontend/order.html">
+    ← หน้าสั่งอาหาร
+</a>
+</header>
+<main>
+<!-- วันที่ / สถานะ Demo -->
+<div class="bar">
+    <span>วันพฤหัสบดีที่ 1 ตุลาคม 2569</span>
+    <span class="demo">
+        ข้อมูลตัวอย่าง
+    </span>
+</div>
+<!-- สถิติ -->
+<section class="stats">
+    <div class="stat hot">
+        <span>ยอดขายวันนี้</span>
+        <strong id="total-sales"></strong>
+    </div>
+    <div class="stat">
+        <span>ออเดอร์ทั้งหมด</span>
+        <strong id="total-orders"></strong>
+    </div>
+    <div class="stat">
+        <span>รอทำ / กำลังทำ</span>
+        <strong>2</strong>
+    </div>
+    <div class="stat">
+        <span>เฉลี่ยต่อออเดอร์</span>
+        <strong>225 บาท</strong>
+    </div>
+</section>
+<!-- เนื้อหาหลัก -->
+<div class="grid">
+    <!-- ออเดอร์ -->
+    <section class="panel orders-panel">
+        <h2>ออเดอร์</h2>
+        <div class="tabs">
+            <button class="on">
+                ทั้งหมด (2)
+            </button>
+            <button>
+                รอทำ (1)
+            </button>
+            <button>
+                กำลังทำ (1)
+            </button>
+            <button>
+                เสิร์ฟแล้ว (0)
+            </button>
+        </div>
+        <div class="orderList"> 
+            
+        </div>
+        
+    
+    </section>
+    <!-- ฝั่งข้อมูล -->
+    <div class="side-content">
+        <!-- เมนูขายดี -->
+        <section class="panel">
+            <h2>เมนูขายดี</h2>
+            <div class="rank">
+                <b>1</b>
+                <span>ผัดไทย</span>
+                <span>3 จาน</span>
+                <div class="track">
+                    <i style="width:100%"></i>
+                </div>
+            </div>
+            <div class="rank">
+                <b>2</b>
+                <span>ก๋วยเตี๋ยวหมู</span>
+                <span>3 จาน</span>
+                <div class="track">
+                    <i style="width:100%"></i>
+                </div>
+            </div>
+            <div class="rank">
+                <b>3</b>
+                <span>ชาเย็น</span>
+                <span>2 จาน</span>
+                <div class="track">
+                    <i style="width:67%"></i>
+                </div>
+            </div>
+            <div class="rank">
+                <b>4</b>
+                <span>ข้าวผัด</span>
+                <span>2 จาน</span>
+                <div class="track">
+                    <i style="width:67%"></i>
+                </div>
+            </div>
+        </section>
+        <!-- ยอดขายรายชั่วโมง -->
+        <section class="panel">
+            <h2>ยอดขายรายชั่วโมง</h2>
+            <div class="hours">
+                <div>
+                    <i style="height:20%"></i>
+                    09
+                </div>
+                <div>
+                    <i style="height:40%"></i>
+                    10
+                </div>
+                <div>
+                    <i style="height:15%"></i>
+                    11
+                </div>
+                <div>
+                    <i style="height:65%"></i>
+                    12
+                </div>
+                <div>
+                    <i style="height:30%"></i>
+                    13
+                </div>
+                <div>
+                    <i style="height:80%"></i>
+                    14
+                </div>
+                <div>
+                    <i style="height:45%"></i>
+                    15
+                </div>
+                <div>
+                    <i style="height:25%"></i>
+                    16
+                </div>
+                <div>
+                    <i style="height:60%"></i>
+                    17
+                </div>
+                <div>
+                    <i style="height:90%"></i>
+                    18
+                </div>
+                <div>
+                    <i style="height:75%"></i>
+                    19
+                </div>
+                <div>
+                    <i style="height:50%"></i>
+                    20
+                </div>
+                <div>
+                    <i style="height:35%"></i>
+                    21
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</main>
+</body>
+</html>

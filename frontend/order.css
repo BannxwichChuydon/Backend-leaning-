@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap');
+
+:root {
+    --brand: #f47b20;
+    --brand-dark: #d9650f;
+    --brand-soft: #fff1e4;
+    --ink: #262626;
+    --muted: #6b6b6b;
+    --bg: #f5f5f3;
+    --line: #e4e4e0;
+    --ok: #1f9d55;
+    --header-h: 64px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 90px); }
+body {
+    font-family: 'Prompt', 'Noto Sans Thai', system-ui, sans-serif;
+    font-size: 16px; line-height: 1.5;
+    background: var(--bg); color: var(--ink);
+    -webkit-tap-highlight-color: transparent;
+}
+button { font-family: inherit; touch-action: manipulation; }
+:focus-visible { outline: 3px solid #1b6ef3; outline-offset: 2px; }
+
+/* ===== HEADER: โลโก้ซ้าย เลขโต๊ะขวา ===== */
+.header {
+    position: sticky; top: 0; z-index: 50;
+    height: var(--header-h);
+    background: var(--brand);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px;
+}
+.logo { color: #fff; font-size: 22px; font-weight: 600; }
+.table-btn {
+    background: #fff; color: var(--brand-dark);
+    border: none; border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 16px; font-weight: 600;
+}
+
+/* ===== LAYOUT ===== */
+.container { max-width: 1400px; margin: auto; display: flex; align-items: flex-start; }
+.menu-area { flex: 1; min-width: 0; padding: 0 20px 24px; }
+
+/* ===== หมวดหมู่: แถบค้างด้านบน กดง่าย ===== */
+.categories {
+    position: sticky; top: var(--header-h); z-index: 40;
+    display: flex; gap: 10px;
+    overflow-x: auto;
+    padding: 12px 0;
+    background: var(--bg);
+    scrollbar-width: none;
+}
+.categories::-webkit-scrollbar { display: none; }
+.category {
+    flex: 0 0 auto;
+    display: flex; align-items: center; gap: 8px;
+    min-height: 48px;
+    padding: 6px 18px 6px 10px;
+    background: #fff;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    text-decoration: none; color: var(--ink);
+    font-size: 16px; font-weight: 500; white-space: nowrap;
+}
+.category:active, .category:hover { border-color: var(--brand); background: var(--brand-soft); }
+.category-img { font-size: 24px; line-height: 1; background: none; }
+.category span { font-size: 16px; }
+
+/* ===== หัวข้อหมวด ===== */
+.menu-section { margin-top: 20px; margin-bottom: 28px; }
+.section-title {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px;
+    padding-left: 12px; border-left: 5px solid var(--brand);
+}
+.section-title h2 { font-size: 22px; font-weight: 600; }
+.section-title a { color: var(--muted); font-size: 14px; text-decoration: none; }
+
+/* ===== การ์ดอาหาร ===== */
+.food-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.food-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 10px;
+    display: flex; flex-direction: column;
+}
+.food-img {
+    height: 120px;
+    background: #efefec;
+    border-radius: 10px;
+    display: flex; justify-content: center; align-items: center;
+    color: #9a9a95; font-size: 13px;
+}
+.food-card h3 { font-size: 17px; font-weight: 500; margin-top: 10px; }
+.food-card p { font-size: 18px; font-weight: 600; color: var(--brand-dark); margin: 2px 0 10px; }
+.food-card button {
+    width: 100%; margin-top: auto;
+    min-height: 48px;
+    border: none; border-radius: 10px;
+    background: var(--brand); color: #fff;
+    font-size: 17px; font-weight: 600;
+    cursor: pointer;
+}
+.food-card button::before { content: "+ "; }
+.food-card button:hover { background: var(--brand-dark); }
+.food-card button:active { transform: scale(.97); }
+
+/* ===== ตะกร้า (ขวา) ===== */
+.order-summary {
+    width: 340px;
+    margin: 12px 20px 12px 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    display: flex; flex-direction: column;
+    position: sticky; top: calc(var(--header-h) + 12px);
+    max-height: calc(100vh - var(--header-h) - 24px);
+    overflow: hidden;
+}
+.order-summary h2 { font-size: 20px; font-weight: 600; padding: 16px 18px 2px; }
+.order-info { padding: 0 18px 12px; font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--line); }
+
+.orderlist { flex: 1; min-height: 120px; padding: 12px; overflow-y: auto; }
+.orderlist:empty::before {
+    content: "ยังไม่ได้เลือกอาหาร\Aกด “+ เพิ่ม” ที่เมนูที่ต้องการ";
+    white-space: pre-line; display: block; text-align: center;
+    padding: 30px 8px; color: var(--muted); font-size: 15px;
+}
+.order-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 12px; margin-bottom: 8px;
+    background: var(--bg); border-radius: 10px;
+    font-size: 16px;
+}
+.order-item p { margin: 0; }
+.delete-btn {
+    min-height: 40px; padding: 6px 14px;
+    background: #fff; color: #c62828;
+    border: 1px solid #e8b4b4; border-radius: 8px;
+    font-size: 14px; cursor: pointer;
+}
+
+.order-bottom { padding: 14px 16px 16px; border-top: 1px solid var(--line); }
+.total { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; font-size: 16px; }
+.total strong { font-size: 26px; font-weight: 600; }
+.order-btn, .clear-btn {
+    width: 100%; min-height: 52px;
+    border-radius: 12px; font-size: 18px; font-weight: 600; cursor: pointer;
+}
+.order-btn { border: none; background: var(--ok); color: #fff; margin-bottom: 8px; }
+.order-btn:active { transform: scale(.98); }
+.clear-btn { border: 1px solid var(--line); background: #fff; color: var(--muted); font-size: 15px; font-weight: 500; min-height: 44px; }
+
+footer {
+    background: #3a3a3a; color: #ddd;
+    min-height: 52px; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+}
+
+/* ===== LAPTOP (<=1100) ===== */
+@media (max-width: 1100px) {
+    .order-summary { width: 300px; margin-right: 14px; }
+    .menu-area { padding: 0 14px 24px; }
+    .food-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ===== iPad แนวตั้ง + มือถือ (<=900): ตะกร้าเป็นแถบล่าง ===== */
+@media (max-width: 900px) {
+    html { scroll-padding-top: calc(var(--header-h) + 80px); }
+    .container { display: block; }
+    .menu-area { padding: 0 16px 24px; }
+
+    .order-summary {
+        position: fixed; left: 0; right: 0; bottom: 0; top: auto;
+        width: 100%; max-height: 60vh; margin: 0;
+        border: none; border-radius: 18px 18px 0 0;
+        box-shadow: 0 -6px 24px rgba(0, 0, 0, .18);
+        z-index: 60;
+    }
+    .order-summary h2, .order-info { display: none; }
+    .orderlist { min-height: 0; max-height: 28vh; padding: 12px 16px 0; }
+    .orderlist:empty { display: none; }
+    .order-bottom { padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-top: none; }
+    .total { margin-bottom: 8px; }
+    .order-btn { margin-bottom: 6px; }
+    .clear-btn { min-height: 40px; }
+    footer { padding-bottom: 210px; }
+}
+
+/* ===== มือถือ (<=600): เมนูเรียง 2 คอลัมน์ ===== */
+@media (max-width: 600px) {
+    :root { --header-h: 56px; }
+    .header { padding: 0 14px; }
+    .logo { font-size: 19px; }
+    .table-btn { font-size: 14px; padding: 8px 14px; }
+    .menu-area { padding: 0 12px 24px; }
+    .food-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .food-img { height: 96px; }
+    .food-card h3 { font-size: 16px; }
+    .section-title h2 { font-size: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
